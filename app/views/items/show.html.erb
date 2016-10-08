@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Заголовок:</strong>
+  <%= @item.caption %>
+</p>
+
+<p>
+  <strong>Дата:</strong>
+  <%= @item.ndate %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @item.tags %>
+</p>
+
+<p>
+  <strong>текст новости:</strong>
+  <%= @item.body %>
+</p>
+
+<%= link_to 'изменить', edit_item_path(@item) %> |
+<%= link_to 'назад', items_path %>

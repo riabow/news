@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Новости</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h2><%= t "items" %></h2>
+  	<h1>Приложение для вывода новостей</h1> 
+  	 <br> текст из application.html.erb 
+
+    <%= yield %>
+  </body>
+</html>
