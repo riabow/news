@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tov:</strong>
+  <%= @price.tov.name %>(
+  <%= @price.tov_id %>)
+</p>
+
+<p>
+  <strong>Supl:</strong>
+  <%= @price.supl_id %>
+</p>
+
+<p>
+  <strong>Prc:</strong>
+  <%= @price.prc %>
+</p>
+
+<p>
+  <strong>D:</strong>
+  <%= @price.d %>
+</p>
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>

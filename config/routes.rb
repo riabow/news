@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :prices
+  resources :tovs
+  resources :sp2s
+  resources :supls
   get 'home/index'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

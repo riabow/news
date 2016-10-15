@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tovs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tovs.each do |tov| %>
+      <tr>
+        <td><%= tov.name %></td>
+        <td><%= image_tag tov.avatar.url(:thumb) %></td>
+
+        <td><%= link_to 'Show', tov %></td>
+        <td><%= link_to 'Edit', edit_tov_path(tov) %></td>
+        <td><%= link_to 'Destroy', tov, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tov', new_tov_path %>

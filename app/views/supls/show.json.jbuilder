@@ -1,0 +1,1 @@
+json.partial! "supls/supl", supl: @supl

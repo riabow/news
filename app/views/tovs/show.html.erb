@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tov.name %>
+  <%= image_tag @tov.avatar.url %>
+</p>
+
+<%= link_to 'Edit', edit_tov_path(@tov) %> |
+<%= link_to 'Back', tovs_path %>

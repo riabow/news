@@ -1,0 +1,57 @@
+<% params.each do |par| %>
+  <li><%= par %> <%= par %></li>
+<% end %>
+*****
+tov_id <%= :tov_id.to_s%>
+******
+
+<%= form_for(price) do |f| %>
+  <% if price.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(price.errors.count, "error") %> prohibited this price from being saved:</h2>
+
+      <ul>
+      <% price.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <%= select_tag(:tov_id, options_for_select(@tovs , @price.tov_id  ), :prompt => "Select tov" )  %>
+
+
+ <%= select_tag(:supl_id, options_for_select(@supls , @price.supl_id  ), :prompt => "Select supl" )  %>
+
+  <!--
+  <%= select_tag(:tov_id, options_for_select(@tovs,2), :prompt => "select tov" )  %>
+
+  
+  <div class="field">
+    <%= f.label :tov_id %>
+    ***
+    <%= f.number_field :tov_id %>
+  </div>
+ 
+
+  <div class="field">
+    <%= f.label :supl_id %>
+    <%= f.number_field :supl_id %>
+  </div>
+ -->
+ 
+  <div class="field">
+    <%= f.label :prc %>
+    <%= f.text_field :prc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :d %>
+    <%= f.datetime_select :d %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

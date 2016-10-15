@@ -1,0 +1,30 @@
+<%= form_for(tov, html: { multipart: true } )do |f| %>
+  <% if tov.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tov.errors.count, "error") %> prohibited this tov from being saved:</h2>
+
+      <ul>
+      <% tov.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  
+  <%= image_tag @tov.avatar.url %>
+<br>
+ <div class="fiels">
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %>
+ </div> 
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

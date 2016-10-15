@@ -1,0 +1,1 @@
+json.partial! "sp2s/sp2", sp2: @sp2

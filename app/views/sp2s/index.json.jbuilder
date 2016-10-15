@@ -1,0 +1,1 @@
+json.array! @sp2s, partial: 'sp2s/sp2', as: :sp2

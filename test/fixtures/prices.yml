@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tov_id: 1
+  supl_id: 1
+  prc: 1.5
+  d: 2016-10-12 00:10:19
+
+two:
+  tov_id: 1
+  supl_id: 1
+  prc: 1.5
+  d: 2016-10-12 00:10:19
