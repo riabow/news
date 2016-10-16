@@ -16,9 +16,22 @@
   <tbody >
     <% @prices.each do |price| %>
       <tr>
-        <td> <%= price.tov.name %> (<%= price.tov_id %>)</td>
+        <td>
+        <% if price.tov_id.blank?  %>
+          NILL
+        <%else%>
+          <%= price.tov.name %> (<%= price.tov_id %>)
+        <% end %> 
+        </td>
 
-        <td><%= price.supl.name %></td>
+        <td>
+        <% if price.supl_id.blank?  %>
+          NILL
+        <%else%>
+          <%= price.supl.name %>(<%= price.supl_id %>)
+        <% end %>    
+        </td>
+
         <td><%= price.prc %></td>
         <td><%= price.d %></td>
         <td><%= link_to 'Show', price %></td>

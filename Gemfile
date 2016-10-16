@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
+# for using the image in tables 
+# avatars
 gem "paperclip", "~> 5.0.0"
+gem 'paperclip-i18n'
+
+gem 'simple_hashtag'
+
+
+gem "mysql2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'

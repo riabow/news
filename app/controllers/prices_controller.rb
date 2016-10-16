@@ -5,12 +5,15 @@ class PricesController < ApplicationController
   # GET /prices.json
   def index
     @prices = Price.all
+    @tovs =  Tov.all.map{ |c| [c.name, c.id] }
+    @supls =  Supl.all.map{ |c| [c.name, c.id] }
   end
 
   # GET /prices/1
   # GET /prices/1.json
   def show
      @tovs =  Tov.all.map{ |c| [c.name, c.id] }
+     @supls =  Supl.all.map{ |c| [c.name, c.id] }
   end
 
   # GET /prices/new
@@ -31,7 +34,8 @@ class PricesController < ApplicationController
   def create
     @price = Price.new(price_params)
     @price.tov_id = params[:tov_id]
-
+    @price.supl_id = params[:supl_id]
+    
     respond_to do |format|
       if @price.save
         format.html { redirect_to @price, notice: 'Price was successfully created.' }

@@ -2,8 +2,10 @@
 
 <p>
   <strong>Tov:</strong>
-  <%= @price.tov.name %>(
-  <%= @price.tov_id %>)
+   <% if  @price.tov_id.blank? == false  %>
+  	<%= @price.tov.name %>
+  	(<%= @price.tov_id %>)
+  <%end%>
 </p>
 
 <p>

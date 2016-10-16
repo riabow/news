@@ -8,11 +8,13 @@ class ItemsController < ApplicationController
   def index
     #@items = Item.all
     @items = Item.where ([" tags LIKE ?","%#{params[:search]}%"])
+    @hashtags = SimpleHashtag::Hashtag.all
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+
   end
 
 
