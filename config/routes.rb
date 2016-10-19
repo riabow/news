@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :companies do 
+    collection { post :import}
+    collection { post :deleteall}
+  end  
+
   get "hashtags/:hashtag",   to: "hashtags#show",      as: :hashtag
   get "hashtags",            to: "hashtags#index",     as: :hashtags
   resources :prices

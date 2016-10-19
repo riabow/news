@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161015235005) do
+ActiveRecord::Schema.define(version: 20161019162101) do
+
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "name"
+    t.string   "manager"
+    t.string   "staus"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string   "caption"
+    t.string   "caption",                               collation: "utf8_bin"
     t.date     "ndate"
-    t.string   "tags"
-    t.text     "body",       limit: 65535
+    t.string   "tags",                                  collation: "utf8_bin"
+    t.text     "body",       limit: 65535,              collation: "utf8_bin"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end

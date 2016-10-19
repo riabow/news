@@ -6,6 +6,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'paperclip-i18n'
 
 gem 'simple_hashtag'
+gem 'roo'
 
 
 gem "mysql2"
